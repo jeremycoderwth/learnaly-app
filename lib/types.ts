@@ -21,3 +21,4 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
     inputSize?: 'sm' | 'md' | 'lg';
     icon?: React.ReactNode;
 }
+
