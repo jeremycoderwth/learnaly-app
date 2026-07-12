@@ -5,13 +5,32 @@
   --foreground: #171717;
 
   /* brand colors */
-  
+  --deep-indigo: #4F46E5; /* primary 1 */
+  --mint-green: #10B981; /* accent 1*/
+  --off-white: #d9d9d9; /* neutral/background */
+
+  --plum: #7C3AED; /* primary 2 */
+  --amber: #F59E0B; /* accent 2 */
+  --cool-gray: #cbcbcb; /* neutral/background 2 */
+
+  --charcoal: #334155; /* primary 3 */
+  --emerald: #059669; /* accent 3 */
+  --warm-cream: #fde3c6; /* neutral/background 3 */
+
+  --deep-gray: #0F172A; /* dark mode */
+  --vivid-indigo: #6366F1; /* primary 4 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: var(--deep-indigo);
+  --color-accent: var(--mint-green);
+  --color-default: var(--cool-gray);
+  --color-light: var(--warm-cream);
+
+  --font-primary: var(--font-inter);
+  --font-secondary: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
 }
 
