@@ -19,6 +19,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
     error?: string;
     helperText?: string;
     inputSize?: 'sm' | 'md' | 'lg';
+    breakpoint?: 'sm' | 'md' | 'lg';
     icon?: React.ReactNode;
 }
 
