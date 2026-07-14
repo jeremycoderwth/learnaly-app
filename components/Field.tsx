@@ -10,6 +10,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       error,
       helperText,
       inputSize = 'md',
+      breakpoint = 'md',
       id,
       icon,
       ...props
@@ -27,7 +28,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label 
             htmlFor={inputId} 
-            className="text-sm font-medium text-gray-700"
+            className="md:text-sm text-base font-medium text-gray-700"
           >
             {label}
           </label>
@@ -46,7 +47,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             aria-invalid={!!error}
             aria-describedby={error ? errorId : helperText ? helperId : undefined}
             className={cn(
-              'flex w-full rounded-lg border bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50',
+              'flex w-full rounded-3xl border shadow-sm font-medium bg-white px-3 py-2 text-sm transition-colors placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50',
               {
                 'border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500': error,
                 'border-gray-300 focus-visible:ring-blue-500 focus-visible:border-blue-500': !error,
@@ -55,6 +56,11 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 'h-8 text-sm': inputSize === 'sm',
                 'h-10 text-base': inputSize === 'md',
                 'h-12 text-lg': inputSize === 'lg',
+              },
+              {
+                'sm:h-8 sm:text-sm': breakpoint === 'sm',
+                'md:h-10 md:text-base': breakpoint === 'md',
+                'lg:h-12 lg:text-lg': breakpoint === 'lg',
               },
               {
                 'pl-10': icon,
